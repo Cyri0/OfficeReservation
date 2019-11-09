@@ -242,7 +242,7 @@ section {
 }
 
 #office-container {
-	width: 1000px;
+	width: 100%;
 	height: 600px;
 	margin: auto;
 	border-radius: 100px;
@@ -303,7 +303,7 @@ section {
 	}
 	
 	#office-container {
-		width: 600px;
+		width: 100%px;
 	}
 }
 
@@ -313,7 +313,7 @@ section {
 	}
 	
 	#office-container {
-		width: 350px;
+		width: 100%;
 	}
 	
 	#goodChoice .choice {
@@ -381,7 +381,8 @@ section {
 	margin-bottom: 0;
 	float: left;
 	
-	background-color: var(--color1);
+	background-color: var(--color2);
+	color: var(--color1);
 
 	-webkit-box-shadow: 14px 13px 10px -12px rgba(0,0,0,0.5);
 	-moz-box-shadow: 14px 13px 10px -12px rgba(0,0,0,0.5);
@@ -420,25 +421,6 @@ section {
 #products-container div:hover {
 }
 
-#products-container div .button {
-	width: 150px;
-	height: 28px;
-	padding: 15px;
-	padding-top: 10px;
-	background-color: var(--color1);
-	margin-left: 10px;
-	color: var(--color1);
-	text-align: center;
-	font-weight: bold;
-	font-size: 16px;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;	
-}
-/*
-#products-container div .button:hover{
-	background-color: var(--color3);
-}*/
 
 @media only screen and (max-width: 1000px) {
 	#products_section {
@@ -466,16 +448,16 @@ section {
 	}
 
 	#products-container div	{
-/*		width: 380px; */
+		width: 300px;
 		height: 200px;
 		float: none;
 	}
 	
 	#products-container div img {
-		max-width: 180px;
+		max-width: 150px;
 		margin-left: 10px;
 		margin-right: 10px;
-		margin-top: 10px;
+		margin-top: 25px;
 		float: right;
 	}
 
@@ -537,18 +519,13 @@ section {
 	border-radius: 50px;
 }
 
-@media only screen and (max-width: 400px) {
-	/*
-	TODO!!!!!!!!!!!!
-	*/
-}
-
 #calendarHolder {
 	width: 350px;
 	height: 320px;
 	background-color: var(--color1);
 	margin: auto;
 }
+
 
 .day {
 	width: 40px;
@@ -646,7 +623,6 @@ section {
 	margin-bottom: 15px;
 }
 
-
 #moreDetails {
 	width: 500px;
 	height: 350px;
@@ -655,12 +631,6 @@ section {
 	padding: 25px;
 	padding-top: 25px;
 	border-radius: 50px;
-}
-
-@media only screen and (max-width: 500px) {
-	#moreDetails {
-	width: 400px;
-	}
 }
 
 #moreDetailsTitle {
@@ -759,6 +729,56 @@ sign {
 #sendReservationButton:hover {
 	cursor: pointer;
 }
+
+@media only screen and (max-width: 500px) {
+	#moreDetails {
+		width: 300px;
+	}
+	
+	#calendarFrame {width: 300px;}
+	#calendarHolder {width: 300px;}
+	.day {
+		width: 30px;
+		height: 30px;
+	}
+	.blankday {
+		width: 30px;
+		height: 30px;
+	}
+	.dayName {
+	height: 20px;
+	width: 30px;
+	font-size: 15px;
+	margin: 5px;
+	padding: 0px;
+	}
+	.dayName:hover {
+		font-size: 15px;
+		height: 20px;
+		width: 40px;
+		float: left;
+		margin: 0px;
+		margin-top: 10px;
+		text-align: center;
+		font-weight: bold;
+		line-height: 1;
+	}
+
+	#sendReservationButton {
+	margin-top: 10px;
+	margin-left: 50px;
+	width: 200px;
+	height: 40px;
+	font-size: 15px;
+	color: var(--color1);
+	background-color: var(--color2);
+	border: none;
+	border-radius: 10px;
+}
+}
+}
+
+
 /*KAPCSOLAT*/
 
 #connection_section{
@@ -816,11 +836,12 @@ sign {
 
 @media only screen and (max-width: 500px) {
 	#messageBox{
-		min-width: 400px;
+		min-width: 200px;
 		min-height: 150px;
 		
-		max-width: 400px;
+		max-width: 200px;
 		max-height: 150px;
+		
 		margin-left: 10px;
 	}
 
