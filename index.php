@@ -326,7 +326,7 @@
 			<section id="connection_section">
 				<a name="connection">
 				<h2>Lépjen kapcsolatba velünk!</h2>
-				<div class="connection-container">
+				<div id="connection-container">
 				<?php
 					echo '<form action ="email.php" method="POST">
 					<p>Név:</p> <input type="text" id="nameBox"  name="nev"> <br>
@@ -339,6 +339,8 @@
 			</section>
 		</main>
 		<footer>
+			<div id="footer_div"></div>
+			<a href="http://cyrio.hu"><h4>cyrio.hu</h4></a>	
 		</footer>
 		<script src="slide.js"> </script>
 	</body>

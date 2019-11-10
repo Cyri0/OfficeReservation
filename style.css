@@ -136,6 +136,9 @@ header {
 	margin-top: 0;
 	z-index: 9000;
 	position: sticky;
+	-webkit-box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.75);
 }
 
 header nav ul {
@@ -183,7 +186,12 @@ header nav ul .first {
 	
 	.mobileMenu {
 		display: block;
+		position: relative;
 		float: right;
+	}
+	
+	.placeholderThreeStripes{
+		font-size: 50px;
 	}
 	
 	.mobileMenu select {
@@ -201,6 +209,12 @@ header nav ul .first {
 		font-size: 15px;
 		border-radius: 5px;
 	}
+	
+	.mobileMenu option {
+		color: var(--color1);
+		background-color: var(--color2);
+		font-size: 20px;
+	}
 }
 
 /*MAIN*/
@@ -216,11 +230,6 @@ section h1 {
 	color: #fff;
 	text-shadow: 2px 2px 8px #111;
 }
-
-section a {
-	padding-top: 150px;
-}
-
 
 section {
 	box-sizing: border-box;
@@ -834,7 +843,7 @@ sign {
 /*KAPCSOLAT*/
 
 #connection_section{
-	height: 600px;
+	height: 300px;
 }
 
 #connection_section h2 {
@@ -846,21 +855,17 @@ sign {
 	font-family:
 }
 
-#connection_section .connection-container {
+#connection_section #connection-container {
 	margin: auto;
-	width: 500px;
+	width: 300px;
 	line-height: 30px;
 }
 
-
-
-	
 }
 
 #messageBox{
 	min-width: 500px;
 	min-height: 200px;
-	
 	max-width: 500px;
 	max-height: 200px;
 }
@@ -892,16 +897,16 @@ sign {
 
 @media only screen and (max-width: 500px) {
 	#connection_section .connection-container {
-	margin: auto;
-	width: 100%;
-	line-height: 30px;
+		margin: auto;
+		width: 100%;
+		line-height: 30px;
 	}
 	
 	#messageBox{
-		min-width: 200px;
+		min-width: 300px;
 		min-height: 150px;
 		
-		max-width: 200px;
+		max-width: 300px;
 		max-height: 150px;
 		
 		margin-left: 10px;
@@ -926,6 +931,28 @@ sign {
 	}
 }
 
+/*FOOTER*/
+footer {
+	
+	-webkit-box-shadow: 0px -5px 24px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px -5px 24px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px -5px 24px 0px rgba(0,0,0,0.75);
+	width: 100%;
+	height: 100px;
+	background-color: var(--color4);
+	color: var(--color1);
+	text-align: center;
+}
+
+#footer_div {
+	width: 100%;
+	height: 80px;
+}
+
+footer h4 {
+	color: var(--color1); 
+}
+
 /*SLIDESHOW*/
 
 .main_title {
@@ -935,7 +962,6 @@ sign {
 		position:absolute;
 /*		background-color: blue; */
 		z-index: 5000;
-		
 		top: 50%;
 		left:50%;
 		transform: translate(-50%, -50%);
