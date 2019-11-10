@@ -780,19 +780,19 @@ sign {
 		width: 100%;
 	}
 	.day {
-		width: 35px;
-		height: 20px;
+		width: 30px;
+		height: 25px;
 		font-size: 13px
 		padding: 0;
 		margin-top: 20px;
 	}
 	.blankday {
-		width: 35px;
+		width: 30px;
 		height: 20px;
 	}
 	.dayName {
 		height: 20px;
-		width: 18px;
+		width: 30px;
 		font-size: 15px;
 		margin: 6px;
 		margin-left: 4px;
@@ -809,7 +809,6 @@ sign {
 		font-weight: bold;
 		line-height: 1;
 	}
-
 
 	#sendReservationButton {
 	margin-top: 10px;
@@ -859,8 +858,6 @@ sign {
 	margin: auto;
 	width: 300px;
 	line-height: 30px;
-}
-
 }
 
 #messageBox{

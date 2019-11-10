@@ -245,7 +245,6 @@
 	</script>	
 	';
 
-
 	$firstDay = strtotime(date("Y").date("m").'01');
 	$firstDay = date("D", $firstDay);
 
@@ -323,8 +322,6 @@
 			else {
 				if($day > 30) $started = false;
 			}
-	
-			
 	}
 		
 		print '<button  id="right">&#10095</button>';
