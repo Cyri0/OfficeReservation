@@ -12,10 +12,13 @@
 			<nav>
 				<ul>
 					<a href="#office" class="hideable">
-						<li class="first">Irodánk</li>
+						<li>Tárgyaló</li>
+					</a>
+					<a href="#office" class="hideable">
+						<li>Oktató terem</li>
 					</a>
 					<a href="#products" class="hideable">
-						<li>Termékeink</li>
+						<li>Szolgáltatások</li>
 					</a>
 					<a href="#reservation">
 						<li>Foglalás</li>
@@ -52,23 +55,18 @@
 					<div id="goodChoice">
 						<div class="choice">
 							<img src="images/office_chair.png">
-							<p class="title">Lorem Ipsum dolor si amet</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur. </p>
+							<p class="title">Modern környezet</p>
+							<p>irodai szolgáltatásokkal</p>
 						</div>
 						<div class="choice">
 							<img src="images/coin.png">
-							<p class="title">Consectetur adipiscing elit</p>
-							<p>Duis ultricies diam ac quam ornare rhoncus!</p>
+							<p class="title">Kedvező árak</p>
+							<p>nincs fenntartási költség</p>
 						</div>
 						<div class="choice">
-							<img src="images/choice.png">
-							<p class="title">Duis ac</p>
-							<p>Fusce pharetra dignissim urna, vel laoreet nibh ultricies sed. Praesent consequat sapien. </p>
-						</div>
-						<div class="choice">
-							<img src="images/choice.png">
-							<p class="title">Dolor sit amet</p>
-							<p>Állítsa fel projektirodaként, majd szüntesse meg!</p>
+							<img src="images/services.png">
+							<p class="title">Kiegészítő szolgáltatások</p>
+							<p>catering és transzfer szolgáltatás,<br>egyedi igények kiszolgálása</p>
 						</div>
 					</div>
 				</div>
@@ -77,7 +75,7 @@
 			<section id="products_section">
 							<a name="products"></a>
 
-				<h2>Válasszon termékeink közül!</h2>
+				<h2>Tekintse át szolgáltatásainkat!</h2>
 				<div id="products-container">
 					<div>
 						<img src="images/office_11.jpg">

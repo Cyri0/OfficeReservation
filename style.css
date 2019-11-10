@@ -242,10 +242,9 @@ section {
 }
 
 #office-container {
-	width: 100%;
+	width: 900px;
 	height: 600px;
 	margin: auto;
-	border-radius: 100px;
 }
 
 #office-container h2 {
@@ -255,28 +254,27 @@ section {
 	color: var(--color1);
 	padding-top: 50px;
 	padding-bottom: 30px;
-	font-family:
 }
 
 #goodChoice {
+	margin-left: 0;
+	margin-right: 0;
 	margin-top: 50px;
-	width: 100%;
+	width: 900px;
 	height: 220px;
 }
 
 #goodChoice .choice {
-	width: 225px;
+	width: 300px;
 	height: 220px;
 	float: left;
-	margin-left: 2.5px;
-	margin-right: 2.5px;
-	padding: 10px;
+	padding: 0px;
 }
 
 #goodChoice .choice img {
 	width: 100px;
 	text-align: center;
-	margin-left: 62.5px;
+	margin-left: 100px;
 	opacity: 0.8;
 }
 
@@ -298,48 +296,37 @@ section {
 }
 
 @media only screen and (max-width: 1000px) {
-	#office_section {
-		height: 800px;
+	#goodChoice .choice {
+		width: 190px;
+		height: 220px;
+		float: left;
+		padding: 0px;
+		padding: 5px;
 	}
-	
-	#office-container {
-		width: 100%px;
-	}
+
+	#goodChoice {
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 50px;
+	width: 100%;
+	height: 220px;
 }
 
-@media only screen and (max-width: 500px) {
-	#office_section {
-		height: 650px;
-	}
 	
 	#office-container {
-		width: 100%;
+		width: 600px;
+		margin: auto;
 	}
 	
-	#goodChoice .choice {
-		width: 150px;
-		height: 150px;
-		float: left;
-		margin-left: 2.5px;
-		margin-right: 2.5px;
-		padding: 10px;
-	}
-
-	#goodChoice .choice img {
-		width: 60px;
-		text-align: center;
-		margin-left: 45px;
-		opacity: 0.8;
-	}
-
 	#goodChoice .choice .title {
-		font-size: 20px;
+		font-size: 16px;
 		text-align: center;
 		vertical-align: center;
 		padding-top: 20px;
 		font-weight: bold;
 		color: var(--color1);
 		height: 30px;
+		padding-bottom: 10px;
 	}
 
 	#goodChoice .choice p {
@@ -347,9 +334,54 @@ section {
 		padding-top: 10px;
 		color: var(--color1);	
 		text-align: center;
+		line-height: 15px;
+	}
+	#goodChoice .choice img {
+		width: 100px;
+		text-align: center;
+		margin-left: 50px;
+		opacity: 0.8;
 	}
 }
 
+@media only screen and (max-width: 600px) {
+		#office-container {
+		width: 300px;
+		margin: auto;
+	}
+	#goodChoice .choice .title {
+		font-size: 16px;
+		text-align: center;
+		vertical-align: center;
+		padding-top: 20px;
+		font-weight: bold;
+		color: var(--color1);
+		height: 20px;
+		padding-bottom: 0px;
+	}
+	
+		#goodChoice .choice {
+		width: 300px;
+		height: 200px;
+		float: left;
+		padding: 0px;
+		padding: 5px;
+		}
+	
+	#goodChoice .choice img {
+		width: 100px;
+		text-align: center;
+		margin-left: 100px;
+		opacity: 0.8;
+	}
+	
+	#office_section {
+		background-color: var(--color2);
+		margin-top: 0;
+		padding-top: 20px;
+		height: 1000px;
+	}
+}
 
 /*TERMÉKEK*/
 
