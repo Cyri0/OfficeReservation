@@ -172,13 +172,25 @@
 </div>
 <br>
 				<?php
-					echo '<form action ="reservation.php" method="POST">
+					echo '<form action ="index.php" method="POST">
 					<h5>Név:</h5> <input type="text" id="nameBoxReservation"  name="nev"> <br>
-					<h5>E-mail:</h5> <input type="text" id="e-mailBoxReservation" name="email"> <br>
+					<h5>E-mail:</h5> <input type="text" id="e-mailBoxReservation" name="reservationEmail"> <br>
 					<h5>Megjegyzés:</h5> <textarea name="message" id="messageBoxReservation" cols="40" rows="5"></textarea><br>
 					<input type="submit" id="sendReservationButton" value="Lefoglalom"></form>';
 				?>
+				<?php
+				if(isset($_POST['reservationEmail']))
+				{
+					$to = "nemestamas94@gmail.com";
+					$subject = "Foglalás történt az irodafoglaló oldalon keresztül!";
+					$txt = $_POST['message'];
+					$name = $_POST['nev'];
+					$mail = $_POST['reservationEmail'];
 
+					$headers = "From: ".$name." e-mail: ".$mail;
+					mail($to,$subject,$txt,$headers);
+				}
+				?> 
 </div>
 <?php
 
@@ -328,13 +340,27 @@
 				<h2>Lépjen kapcsolatba velünk!</h2>
 				<div id="connection-container">
 				<?php
-					echo '<form action ="email.php" method="POST">
+					echo '<form action ="index.php" method="POST">
 					<p>Név:</p> <input type="text" id="nameBox"  name="nev"> <br>
 					<p>E-mail:</p> <input type="text" id="e-mailBox" name="email"> <br>
 					<p>Üzenet:</p> <textarea name="message" id="messageBox" cols="40" rows="5"></textarea><br>
 					
 					<input type="submit" id="sendButton" value="Küldés"></form>';
 				?>
+				
+				<?php
+				if(isset($_POST['email']))
+				{
+					$to = "nemestamas94@gmail.com";
+					$subject = "Automatikus üzenet az irodafoglalón keresztül";
+					$txt = $_POST['message'];
+					$name = $_POST['nev'];
+					$mail = $_POST['email'];
+
+					$headers = "From: ".$name." e-mail: ".$mail;
+					mail($to,$subject,$txt,$headers);
+				}
+				?> 
 				</div>
 			</section>
 		</main>
