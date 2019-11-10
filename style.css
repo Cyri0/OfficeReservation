@@ -142,7 +142,6 @@ header nav ul {
 	display: block;
 
 	margin:auto;
-/*	margin-top: 20px; */
 	width: fit-content;
 	width: -moz-fit-content;
 }
@@ -163,45 +162,44 @@ header nav ul .first {
 	
 }
 
-header nav ul li:hover {
-	font-weight: bold;
-	color: var(--color3);
-}
+	header nav ul li:hover {
+		font-weight: bold;
+		color: var(--color3);
+	}
 
-header .header-projects {
-	display: none;
-}
+	.mobileMenu {
+		display: none;
+	}
 
 @media only screen and (max-width: 500px) {
 	header {
-		height: 80px;
+		padding: 0;
+		height: 85px;
 	}
 	
-	header nav ul{
-		float:right;
-		margin: 0;
-		margin-right: 10px;
-		margin-top: 15px;
-	}
-	
-	header nav ul li{
-		font-size: 30px;
-		padding: 10 10px;
-		background-color: var(--color2);
-		border-radius: 10px;
-		border-right: none;
-	}
-	
-	header nav ul li:hover {
-		font-weight: normal;
-	}
-	
-	header nav ul .first {
-		border-left: none;
-	}
-	
-	.hideable {
+	header nav ul .hideable {
 		display: none;
+	}
+	
+	.mobileMenu {
+		display: block;
+		float: right;
+	}
+	
+	.mobileMenu select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-ms-appearance: none;
+		border: none;
+		margin-top: 25px;
+		margin-right: 25px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: center;
+		background-color: var(--color2);
+		color: var(--color1);
+		font-size: 15px;
+		border-radius: 5px;
 	}
 }
 
@@ -558,7 +556,6 @@ section {
 	margin: auto;
 }
 
-
 .day {
 	width: 40px;
 	height: 40px;
@@ -767,22 +764,30 @@ sign {
 		width: 300px;
 	}
 	
-	#calendarFrame {width: 300px;}
-	#calendarHolder {width: 300px;}
+	#calendarFrame {
+		width: 300px;
+	}
+	#calendarHolder {
+		width: 100%;
+	}
 	.day {
-		width: 30px;
-		height: 30px;
+		width: 35px;
+		height: 20px;
+		font-size: 13px
+		padding: 0;
+		margin-top: 20px;
 	}
 	.blankday {
-		width: 30px;
-		height: 30px;
+		width: 35px;
+		height: 20px;
 	}
 	.dayName {
-	height: 20px;
-	width: 30px;
-	font-size: 15px;
-	margin: 5px;
-	padding: 0px;
+		height: 20px;
+		width: 18px;
+		font-size: 15px;
+		margin: 6px;
+		margin-left: 4px;
+		padding: 0px;
 	}
 	.dayName:hover {
 		font-size: 15px;
@@ -796,17 +801,32 @@ sign {
 		line-height: 1;
 	}
 
+
 	#sendReservationButton {
 	margin-top: 10px;
-	margin-left: 50px;
-	width: 200px;
+	margin-left: 0px;
+	width: 100px;
 	height: 40px;
 	font-size: 15px;
 	color: var(--color1);
 	background-color: var(--color2);
 	border: none;
 	border-radius: 10px;
-}
+	}
+	
+	#messageBoxReservation {
+	min-width:200px;
+	max-width: 200px;
+	max-height: 80px;
+	min-height: 80px;
+	}
+	
+	#exitButtonMoreDetails {
+		width: 25px;
+		height: 25px;
+		font-size: 20px;
+		
+	}
 }
 }
 
@@ -832,6 +852,10 @@ sign {
 	line-height: 30px;
 }
 
+
+
+	
+}
 
 #messageBox{
 	min-width: 500px;
@@ -867,6 +891,12 @@ sign {
 }
 
 @media only screen and (max-width: 500px) {
+	#connection_section .connection-container {
+	margin: auto;
+	width: 100%;
+	line-height: 30px;
+	}
+	
 	#messageBox{
 		min-width: 200px;
 		min-height: 150px;
@@ -928,13 +958,7 @@ sign {
 	text-align: center;
 }
 
-@media only screen and (max-width: 800px) {	
-}
-
-@media only screen and (max-width: 550px) {
-}
-
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 500px) {
 	.main_title {
 		width: 250px;
 		height: 300px;

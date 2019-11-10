@@ -9,6 +9,18 @@
 	</head>
 	<body>			
 		<header>
+			<div class="mobileMenu">
+				<select>
+					<option disabled selected>
+						&#9776;
+					</option>
+					<option>Tárgyaló</option>
+					<option>Oktató terem</option>
+					<option>Szolgáltatások</option>
+					<option>Foglalás</option>
+					<option>Kapcsolat</option>
+				</select>
+			</div>
 			<nav>
 				<ul>
 					<a href="#office" class="hideable">
@@ -20,7 +32,7 @@
 					<a href="#products" class="hideable">
 						<li>Szolgáltatások</li>
 					</a>
-					<a href="#reservation">
+					<a href="#reservation" class="hideable">
 						<li>Foglalás</li>
 					</a>
 					<a href="#connection" class="hideable">
