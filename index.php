@@ -43,23 +43,25 @@
 		</header>
 		<main>
 			<section class="slideshow-section">
-			
-				<div class="main_title">
-					<h1>Lorem Ipsum</h1>
-					<h2>dolor si amet</h2>
-				</div>
 				<div class="slideshow-container">
 					<div class="mySlides fade">
+						<div class="main_title">
+							<h1>Lorem Ipsum</h1>
+							<h2>dolor si amet</h2>
+						</div>
 						<img src="images/office.jpg">
 					</div>
 					<div class="mySlides fade">
 						<img src="images/office2.jpg">
 					</div>
+					<div class="mySlides fade">
+						<img src="images/office3.jpg">
+					</div>
 					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 					<a class="next" onclick="plusSlides(1)">&#10095;</a>
 				</div>
-				
 			</section>
+
 			<section id="office_section">
 				<a name="office">
 				<div id="office-container">
@@ -96,7 +98,7 @@
 						<!--<a href=""><div class="button">További információk</div></a> -->
 					</div>
 
-					<div >
+					<div>
 						<img id="second" src="images/targyalas_11.jpg">
 						<p class="title">Posuere</p>
 						<p>Phasellus eget nisi non mauris vulputate posuere.</p>
