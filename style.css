@@ -252,17 +252,9 @@ section {
 	background-color: var(--color2);
 	
 	margin: auto;
-	margin-top: 50px;
 	padding-top: 20px;
-	height: 500px;
-	width: 1000px;
-}
-
-@media only screen and (max-width: 1000px) {
-	#office_section{
+	height: 450px;
 	width: 100%;
-	margin-top: 0px;
-	}
 }
 
 #office-container {
@@ -403,16 +395,6 @@ section {
 #products_section {
 	height: 600px;
 }
-/*
-#products_section h2 {
-	font-family: var(--main-font);
-	font-size: 20pt;
-	text-align: center;
-	color: var(--color4);
-	padding-top: 50px;
-	padding-bottom: 30px;
-	font-family:
-}*/
 
 #products-container {
 	display: none;
@@ -424,284 +406,104 @@ section {
 #reservation_section{
 	background-color: var(--color2);
 	margin: auto;
-	margin-top: 50px;
 	padding-top: 20px;
 	height: 600px;
-	width: 1000px;
-}
-
-@media only screen and (max-width: 1000px) {
-	#reservation_section{
 	width: 100%;
-	margin-top: 0px;
 }
 
-}
-
-#calendarFrame {
-	width: 400px;
-	height: 350px;
+#calendar {
+	width: 450px;
+	width: 450px;
+	height: 450px;
+	background-color: white;
 	margin: auto;
-	background-color: var(--color1);
-	padding: 25px;
-	padding-top: 25px;
-	border-radius: 50px;
-}
-
-#calendarHolder {
-	width: 350px;
-	height: 320px;
-	background-color: var(--color1);
-	margin: auto;
+	border-radius: 20px;
 }
 
 .day {
-	width: 40px;
-	height: 40px;
-	margin: 5px;
-	background-color: var(--color1);
-	float: left;
-	border:none;
-	font-size: 14px;
-}
-
-.blankday {
-	width: 40px;
-	height: 40px;
-	margin: 5px;
-	background-color: var(--color1);
-	float: left;
-	border:none;
-	font-size: 14px;
-}
-
-
-.day:hover {
-	cursor: pointer;
-	border: 3px solid #ff5555;
-}
-
-#today {
-	background-color: var(--color1);
-	color: black;
 	font-weight: bold;
-	border: 3px solid #ffaaaa;
-}
-
-#today:hover {
-	cursor: pointer;
-	border: 3px solid #ff5555;
-}
-
-.dayName {
+	float: left;
+	width: 50px;
 	height: 20px;
-	width: 40px;
-	float: left;
-	margin: 5px;
-	margin-top: 10px;
-	text-align: center;
-	font-weight: bold;
-}
-
-#right, #left {
-	margin-top: 5px;
-	width: 100px;
-	height: 40px;
-	float: left;
-	line-height: 0;
-	font-size: 25;
-	background-color: transparent;
-	border: none;
-	color: var(--color2);
-}
-
-#right:hover, #left:hover {
-	cursor: pointer;
-	font-size: 35px;
-}
-
-#left {
-	-moz-transform: scale(-1, 1);
-	-webkit-transform: scale(-1, 1);
-	-o-transform: scale(-1, 1);
-	-ms-transform: scale(-1, 1);
-	transform: scale(-1, 1);
-}
-
-#right {
-	float: right;
-}
-
-#monthName {
-	text-align: center;
-	font-size: 20px;
-	margin-bottom: 15px;
-}
-
-#moreDetails {
-	width: 500px;
-	height: 350px;
+	line-height: 20px;
+	padding: 5px;
+	text-align:center;
 	margin: auto;
-	background-color: var(--color1);
-	padding: 25px;
-	padding-top: 25px;
-	border-radius: 50px;
+	margin-left: 3.5px;
 }
 
-#moreDetailsTitle {
-	text-align: center;
-	font-size: 20px;
-	margin-bottom: 20px;
-	
-}
-
-#moreDetails h5 {
-	text-align: left;
-	font-size: 15px;
-	margin-top: 0px;
-	font-weight: normal;
-	font-size: 15px;
-	line-height: 25px;
-	
-}
-
-#text_test {
+.dayNum {
 	float: left;
-	font-size: 15px;
-	font-weight: normal;
+	width: 50px;
+	height: 20px;
+	line-height: 30px;
+	padding: 5px;
+	text-align:center;
+	margin: auto;
+	margin-left: 3.5px;
+	margin-top: 20px;
 }
 
-#timePickerHolder {
-	font-weight: 0;
-	border: none;
-	height: 40px;
-	margin-bottom: 10px;
-}
-
-sign {
-	padding: 0px;
-	margin: 0px;
-	spacing: 0px;
-	font-size: 10px;
-	line-height: 10px;
-}
-
-#timePickerHolder select {
-	border: none;
-	font-family: var(--main-font);
-	font-size: 15px;
-	margin-top: 10px;
-	padding: 0px;
-	line-height: 15px;
-	margin-bottom: 10px;
-}
-#timePickerHolder select:hover {
+.dayNum:hover{
+	text-decoration: underline;
 	cursor: pointer;
+	
+}
+
+#year{
+	text-align: center;
+	padding-top: 20px;
+	font-size: 12px;
+}
+
+#monthName{
+	text-align: center;
+	padding-top: 20px;
 	font-weight: bold;
+	margin-bottom: 20px;
 }
 
-#exitButtonMoreDetails{
-	width: 40px;
-	height: 40px;
+#calButtHolder{
+	width: 300px;
+	height: 50px;
+}
+.calendarButton{
+	width: 50px;
+	float: left;
+	text-align: center;
+	height: 30px;
+	margin-top: 45px;
+	line-height: 30px;
+}
+
+#elozo{
+	margin-left: 20px;
+}
+#kovetkezo{
 	float: right;
-	background-color: var(--color2);
-	color: var(--color1);
-	border: none;
-	border-radius: 10px;
-	padding: 10px;
+	margin-right: 20px;
+}
+
+.calendarButton:hover {
+	cursor: pointer;
 	font-size: 20px;
-	line-height: 0;
-	-moz-transform: scale(-1, 1);
-	-webkit-transform: scale(-1, 1);
-	-o-transform: scale(-1, 1);
-	-ms-transform: scale(-1, 1);
-	transform: scale(-1, 1);
 }
 
-#exitButtonMoreDetails:hover {
-	cursor: pointer;
-}
-
-#messageBoxReservation {
-	min-width:300px;
-	max-width: 300px;
-	max-height: 80px;
-	min-height: 80px;
-}
-
-#sendReservationButton {
-	margin-top: 10px;
-	margin-left: 150px;
-	width: 200px;
-	height: 40px;
-	font-size: 15px;
-	color: var(--color1);
-	background-color: var(--color2);
-	border: none;
-	border-radius: 10px;
-}
-
-#sendReservationButton:hover {
-	cursor: pointer;
-}
-
-@media only screen and (max-width: 500px) {
-	#moreDetails {
+@media only screen and (max-width: 455px) {
+	#calendar {
 		width: 300px;
+		height: 450px;
 	}
 	
-	#calendarFrame {
-		width: 300px;
-	}
-	#calendarHolder {
-		width: 100%;
-	}
 	.day {
-		width: 30px;
-		height: 25px;
-		font-size: 13px
-		padding: 0;
-		margin-top: 20px;
-	}
-	.blankday {
-		width: 30px;
-		height: 20px;
-	}
-	.dayName {
-		height: 20px;
-		width: 30px;
-		font-size: 15px;
-		margin: 6px;
-		margin-left: 4px;
-		padding: 0px;
-	}
-
-	#sendReservationButton {
-	margin-top: 10px;
-	margin-left: 0px;
-	width: 100px;
-	height: 40px;
-	font-size: 15px;
-	color: var(--color1);
-	background-color: var(--color2);
-	border: none;
-	border-radius: 10px;
+		width: 28px;
 	}
 	
-	#messageBoxReservation {
-	min-width:200px;
-	max-width: 200px;
-	max-height: 80px;
-	min-height: 80px;
-	}
-	
-	#exitButtonMoreDetails {
-		width: 25px;
-		height: 25px;
-		font-size: 20px;
-		
+	.dayNum {
+		width: 28px;
 	}
 }
+
 
 
 /*FOOTER*/
@@ -715,7 +517,12 @@ sign {
 	color: var(--color1);
 	text-align: center;
 	background-color: var(--color4);
-	position: relative;
+}
+
+#footer_title{
+	padding: 10px;
+	font-size: 20px;
+	margin-bottom: 40px;
 }
 
 
@@ -727,8 +534,9 @@ footer h2 {
 
 #footerTextHolder {
 	width: 300px;
-	background-color: red;
 	float: left;
+	text-align: left;
+	line-height: 25px;
 }
 
 #connection-container {
@@ -788,13 +596,54 @@ footer #sendButton:hover {
 
 #downLine {width: 100%; float: left;}
 
-@media only screen and (max-width: 800px) {
+
+
+@media only screen and (max-width: 1000px) {
 	#footerBox {width: 100%;}
+}
+
+@media only screen and (max-width: 700px) {
+
+	#connection-container {
+		width: 100%;
+	}
+	#leftConnection {
+		height: auto;
+		width: 100%;
+	}
+
+	#rightConnection{
+		height: auto;
+		width: 100%;
+	}
+
+	#footerTextHolder {
+		width: 100%;
+		float: left;
+		text-align: left;
+		padding: 10px;
+	}
+	#footer{
+	height: 550px;
+	}
+	
+	footer #sendButton {
+	cursor: pointer;
+	border: solid 1px white;
+	border-radius: 10px;
+	float: left;
+	margin-left: 40%;
+	margin-bottom: 50px;
+}
+	
 }
 
 
 footer h4 {
-	color: var(--color1); 
+	color: var(--color1);
+	font-size: 10px;
+	font-weight: normal;
+	margin-bottom: 0;
 }
 
 /*SLIDESHOW*/
