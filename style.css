@@ -109,8 +109,6 @@ input, select {
 	--color4:#A5754C;
 	--color5:#09090B;
 */
-
-
 	--color1: #EAEAEA;
 	--color2: #534F50; 
 	--color3: #AD974F;
@@ -123,6 +121,20 @@ input, select {
 	text-decoration: none;
 	font-family: var(--main-font);
 	background-color: var(--color1);
+}
+
+h2{
+	color: var(--color1);
+	font-size: 30px;
+	z-index: 5000;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 0;
+	text-align: center;
+}
+
+.dark{
+	color: var(--color4);
 }
 
 /*HEADER*/
@@ -161,13 +173,8 @@ header nav ul li{
 	font-weight: 400;
 }
 
-header nav ul .first {
-	
-}
-
 	header nav ul li:hover {
-		font-weight: bold;
-		color: var(--color3);
+		text-decoration: underline;
 	}
 
 	.mobileMenu {
@@ -243,24 +250,25 @@ section {
 
 #office_section {
 	background-color: var(--color2);
-	margin-top: 0;
+	
+	margin: auto;
+	margin-top: 50px;
 	padding-top: 20px;
-	height: 600px;
+	height: 500px;
+	width: 1000px;
+}
+
+@media only screen and (max-width: 1000px) {
+	#office_section{
+	width: 100%;
+	margin-top: 0px;
+	}
 }
 
 #office-container {
 	width: 900px;
 	height: 600px;
 	margin: auto;
-}
-
-#office-container h2 {
-	font-family: var(--main-font);
-	font-size: 20pt;
-	text-align: center;
-	color: var(--color1);
-	padding-top: 50px;
-	padding-bottom: 30px;
 }
 
 #goodChoice {
@@ -395,7 +403,7 @@ section {
 #products_section {
 	height: 600px;
 }
-
+/*
 #products_section h2 {
 	font-family: var(--main-font);
 	font-size: 20pt;
@@ -404,7 +412,7 @@ section {
 	padding-top: 50px;
 	padding-bottom: 30px;
 	font-family:
-}
+}*/
 
 #products-container {
 	display: none;
@@ -415,17 +423,19 @@ section {
 
 #reservation_section{
 	background-color: var(--color2);
+	margin: auto;
+	margin-top: 50px;
+	padding-top: 20px;
 	height: 600px;
+	width: 1000px;
 }
 
-#reservation_section h2 {
-	font-family: var(--main-font);
-	font-size: 20pt;
-	text-align: center;
-	color: var(--color1);
-	padding-top: 50px;
-	padding-bottom: 30px;
-	font-family:
+@media only screen and (max-width: 1000px) {
+	#reservation_section{
+	width: 100%;
+	margin-top: 0px;
+}
+
 }
 
 #calendarFrame {
@@ -492,19 +502,6 @@ section {
 	text-align: center;
 	font-weight: bold;
 }
-
-.dayName:hover {
-	height: 20px;
-	width: 40px;
-	float: left;
-	margin: 5px;
-	margin-top: 10px;
-	text-align: center;
-	font-size: 20px;
-	line-height: 0;
-}
-
-
 
 #right, #left {
 	margin-top: 5px;
@@ -678,17 +675,6 @@ sign {
 		margin-left: 4px;
 		padding: 0px;
 	}
-	.dayName:hover {
-		font-size: 15px;
-		height: 20px;
-		width: 40px;
-		float: left;
-		margin: 0px;
-		margin-top: 10px;
-		text-align: center;
-		font-weight: bold;
-		line-height: 1;
-	}
 
 	#sendReservationButton {
 	margin-top: 10px;
@@ -716,115 +702,96 @@ sign {
 		
 	}
 }
-}
 
-
-/*KAPCSOLAT*/
-
-#connection_section{
-	height: 300px;
-}
-
-#connection_section h2 {
-	font-family: var(--main-font);
-	font-size: 20pt;
-	text-align: center;
-	padding-top: 50px;
-	padding-bottom: 30px;
-	font-family:
-}
-
-#connection_section #connection-container {
-	margin: auto;
-	width: 300px;
-	line-height: 30px;
-}
-
-#messageBox{
-	min-width: 500px;
-	min-height: 200px;
-	max-width: 500px;
-	max-height: 200px;
-}
-
-#nameBox, #e-mailBox {
-	width: 200px;
-}
-
-#sendButton {
-	width: 200px;
-	height: 50px;
-	float: right;
-	margin-top: 20px;
-	
-	text-decoration: none;
-	border: none;
-	background-color: var(--color4);
-	margin-left: 10px;
-	color: var(--color1);
-	text-align: center;
-	font-weight: bold;
-	font-size: 16px;
-}
-
-#sendButton:hover{
-		background-color: var(--color3);
-		cursor: pointer;
-}
-
-@media only screen and (max-width: 500px) {
-	#connection_section .connection-container {
-		margin: auto;
-		width: 100%;
-		line-height: 30px;
-	}
-	
-	#messageBox{
-		min-width: 300px;
-		min-height: 150px;
-		
-		max-width: 300px;
-		max-height: 150px;
-		
-		margin-left: 10px;
-	}
-
-	#nameBox, #e-mailBox {
-		width: 200px;
-		margin-left: 10px;
-	}
-
-	
-	#connection_section {
-		height: 530px;
-	}
-	
-	#connection_section p {
-		padding-left: 10px;
-	}
-	
-	#sendButton {
-		float: none;
-	}
-}
 
 /*FOOTER*/
-footer {
-	
+
+#footer {
 	-webkit-box-shadow: 0px -5px 24px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px -5px 24px 0px rgba(0,0,0,0.75);
 	box-shadow: 0px -5px 24px 0px rgba(0,0,0,0.75);
 	width: 100%;
-	height: 100px;
-	background-color: var(--color4);
+	height: 300px;
 	color: var(--color1);
+	text-align: center;
+	background-color: var(--color4);
+	position: relative;
+}
+
+
+footer h2 {
 	text-align: center;
 }
 
-#footer_div {
-	width: 100%;
-	height: 80px;
+#footerBox{width: 800px; margin: auto;}
+
+#footerTextHolder {
+	width: 300px;
+	background-color: red;
+	float: left;
 }
+
+#connection-container {
+	width:400px;
+	float: left;
+}
+#leftConnection {
+	float: left;
+	width: 200px;
+	height: 200px;
+}
+
+#leftConnection input {
+	width: 180px;
+	height: 40px;
+	margin: 5px;
+	border-radius: 5px;
+	background-color: white;
+}
+
+#rightConnection {
+	width: 300px
+	height: 200px;
+	float: left;
+}
+#rightConnection textarea {
+	border-radius: 5px;
+	margin: 5px;
+
+	max-width: 180px;
+	min-width: 180px;
+	max-height: 90px;
+	min-height: 90px;
+	background-color: white;
+	font-size: 13px;
+	line-height: 18px;
+	paddig-left: 10px;
+	padding-top: 5px;
+	paddig-right: 10px;
+}
+
+footer #sendButton {
+	background-color: var(--color4);
+	border: none;
+	color: white;
+	width: 100px;
+	height: 40px;
+	float: right;
+	margin-right: 15px;
+}
+
+footer #sendButton:hover {
+	cursor: pointer;
+	border: solid 1px white;
+	border-radius: 10px;
+}
+
+#downLine {width: 100%; float: left;}
+
+@media only screen and (max-width: 800px) {
+	#footerBox {width: 100%;}
+}
+
 
 footer h4 {
 	color: var(--color1); 
@@ -833,7 +800,6 @@ footer h4 {
 /*SLIDESHOW*/
 
 .main_title {
-
 		width: 500px;
 		height: 150px;
 		position:absolute;

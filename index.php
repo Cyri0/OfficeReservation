@@ -47,7 +47,7 @@
 					<div class="mySlides fade">
 						<div class="main_title">
 							<h1>Lorem Ipsum</h1>
-							<h2>dolor si amet</h2>
+							<h3>dolor si amet</h3>
 						</div>
 						<img src="images/office.jpg">
 					</div>
@@ -61,6 +61,7 @@
 					<a class="next" onclick="plusSlides(1)">&#10095;</a>
 				</div>
 			</section>
+			<script src="slide.js"> </script>
 
 			<section id="office_section">
 				<a name="office">
@@ -89,7 +90,7 @@
 			<section id="products_section">
 							<a name="products"></a>
 
-				<h2>Tekintse át szolgáltatásainkat!</h2>
+				<h2 class="dark">Tekintse át szolgáltatásainkat!</h2>
 				<div id="products-container">
 					<div>
 						<img src="images/office_11.jpg">
@@ -334,39 +335,47 @@
 ?>
 <!--NAPTAR END -->				
 			</section>
-			<section id="connection_section">
-				<a name="connection">
-				<h2>Lépjen kapcsolatba velünk!</h2>
-				<div id="connection-container">
-				<?php
-					echo '<form action ="index.php" method="POST">
-					<p>Név:</p> <input type="text" id="nameBox"  name="nev"> <br>
-					<p>E-mail:</p> <input type="text" id="e-mailBox" name="email"> <br>
-					<p>Üzenet:</p> <textarea name="message" id="messageBox" cols="40" rows="5"></textarea><br>
-					
-					<input type="submit" id="sendButton" value="Küldés"></form>';
-				?>
-				
-				<?php
-				if(isset($_POST['email']))
-				{
-					$to = "nemestamas94@gmail.com";
-					$subject = "Automatikus üzenet az irodafoglalón keresztül";
-					$txt = $_POST['message'];
-					$name = $_POST['nev'];
-					$mail = $_POST['email'];
-
-					$headers = "From: ".$name." e-mail: ".$mail;
-					mail($to,$subject,$txt,$headers);
-				}
-				?> 
-				</div>
-			</section>
 		</main>
-		<footer>
-			<div id="footer_div"></div>
-			<a href="http://cyrio.hu"><h4>cyrio.hu</h4></a>	
+		<footer id="footer">
+			<a name="connection">
+			<h2 class="dark">Lépjen kapcsolatba velünk!</h2>
+			<div id="footerBox">
+				<div id="footerTextHolder">
+				Címünk: aasasdasdas</br>
+				Telefonszám: asdsaasd
+				</div>
+				<div id="connection-container">
+					<?php
+						echo '<form action ="index.php" method="POST">
+						<div id="leftConnection">
+							<input type="text" id="nameBox" placeholder="Név:"  name="nev"> <br>
+							<input type="text" id="e-mailBox" placeholder="Email:" name="email">
+						</div>
+						<div id="rightConnection">
+							<textarea name="message" id="messageBox" placeholder="Üzenet:" cols="40" rows="5"></textarea>
+						</div>
+						
+						<input type="submit" id="sendButton" value="Elküldöm"></form>';
+					?>
+					
+					<?php
+					if(isset($_POST['email']))
+					{
+						$to = "nemestamas94@gmail.com";
+						$subject = "Automatikus üzenet az irodafoglalón keresztül";
+						$txt = $_POST['message'];
+						$name = $_POST['nev'];
+						$mail = $_POST['email'];
+
+						$headers = "From: ".$name." e-mail: ".$mail;
+						mail($to,$subject,$txt,$headers);
+					}
+					?> 
+				</div>
+			</div>		
+			<div id="downLine">
+			<a href="http://cyrio.hu"><h4>cyrio.hu</h4></a>
+			</div>			
 		</footer>
-		<script src="slide.js"> </script>
 	</body>
 </html>
