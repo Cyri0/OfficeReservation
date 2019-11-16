@@ -506,6 +506,153 @@ section {
 
 
 
+
+/*FOGLALÁS MENÜ*/
+
+#calendarTitle{
+	width: 100px;
+	text-align: center;
+	margin: auto;
+	padding-top: 20px;
+	font-size: 20px;
+	height: 50px;
+	line-height: 50px;
+}
+
+#back{
+	width: 40px;
+	float: left;
+	margin-left: 20px;
+	height: 50px;
+	line-height: 50px;
+	margin-top: 20px;
+}
+
+#choosenDate{
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#text{
+	width: 80px;
+	text-size: 15px;
+	padding: 0;
+	line-height: 15px;
+	margin-left: 30px;
+}
+
+.timeSelect::-ms-expand {
+    display: none;
+}
+
+#startHourSelect{
+	margin-left: 24px;
+}
+
+.timeSelect {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+	text-family: var(--main-font);
+	font-size: 15px;
+    text-overflow: '';
+	background-color: white;
+	border: none;
+	text-decoration: none;
+}
+
+.timeSelect:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+
+#nameBoxRES{
+	padding-left:10px;
+	padding-right: 10px;
+	font-size: 15px
+	margin-left: 10px;
+	height: 40px;
+	float: left;
+	margin-top: 20px;
+	border-radius: 10px;
+	background-color: white;
+	border: solid 2px var(--color2);
+	margin-left: 20px;
+	width: 180px;
+}
+
+#e-mailBoxRES{
+	padding-left:10px;
+	padding-right: 10px;
+	font-size: 15px
+	margin-right: 10px;
+	height: 40px;
+	float: right;
+	margin-top: 20px;
+	border-radius: 10px;
+	background-color: white;
+	border: solid 2px var(--color2);
+	margin-right: 20px;
+}
+
+#messageBoxRES{
+	padding: 10px;
+	font-size: 15px;
+	background-color: white;
+	max-width: 408px;
+	min-width: 408px;
+	min-height: 150px;
+	max-height: 150px;
+	margin-left: 5%;
+	margin-top: 20px;
+	border-radius: 10px;
+	border: solid 2px var(--color2);
+}
+
+
+#sendButtonRES{
+	margin-top: 10px;
+	width: 100px;
+	height: 50px;
+	border-radius: 10px;
+	float: right;
+	margin-right: 5%;
+	background-color: white;
+	border: solid 2px var(--color4);
+}
+
+#sendButtonRES:hover{
+	background-color: var(--color4);
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+
+@media only screen and (max-width: 455px) {
+	#nameBoxRES, #e-mailBoxRES{
+		float: left;
+		margin-left: 10px;
+		width: 250px;
+	}
+	#messageBoxRES{
+		max-width: 250px;
+		min-width: 250px;
+		min-height: 100px;
+		max-height: 100px;
+		float: left;
+		margin-left: 10px;
+	}
+	
+	#sendButtonRES{
+		margin-top: 5px;
+	}
+}
+
+
+
 /*FOOTER*/
 
 #footer {

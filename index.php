@@ -135,8 +135,7 @@
 				06/30 555 555
 				</div>
 				<div id="connection-container">
-					<?php
-						echo '<form action ="index.php" method="POST">
+				<form action ="index.php" method="POST">
 						<div id="leftConnection">
 							<input type="text" id="nameBox" placeholder="Név:"  name="nev"> <br>
 							<input type="text" id="e-mailBox" placeholder="Email:" name="email">
@@ -144,9 +143,9 @@
 						<div id="rightConnection">
 							<textarea name="message" id="messageBox" placeholder="Üzenet:" cols="40" rows="5"></textarea>
 						</div>
-						
-						<input type="submit" id="sendButton" value="Elküldöm"></form>';
-					?>
+				<input type="submit" id="sendButton" value="Elküldöm">
+				</form>
+				
 					
 					<?php
 					if(isset($_POST['email']))
