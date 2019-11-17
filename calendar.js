@@ -101,24 +101,42 @@ function addToCal(text){
 	document.getElementById('calendar').innerHTML += text;
 }
 
-
 function initReservationMenu(choosen){
 	var current = currentDay;
 	addToCal('<div id="back" class="calendarButton" onclick="sendBackToCalendar()">&#10094</div>');
 	
 	addToCal('<div id="calendarTitle">Foglalás</div>');
-	addToCal('<div id="choosenDate">'+current.getFullYear() + '/' + current.getMonth() + '/' + choosen+ '</div>');
 
+	
+	var dateText;
+	var res_month = (current.getMonth() + 1);
+	var res_day = choosen;
+	if(current.getMonth() < 10){ res_month = '0' + (current.getMonth()+1); }
+	if(choosen < 10){	res_day = '0' + choosen; }
+
+	dateText= current.getFullYear() + '.' + res_month + '.' + res_day + '.';
+
+	addToCal('<div id="choosenDate">'+dateText+ '</div>');
 
 	addToCal('<div id="text">Időpont: </div>');
 	addToCal('<select class="timeSelect" id="startHourSelect"></select>');
-	
+		
 	for(i = 8; i <= 22; i++){
-		if(i<10){
-			document.getElementById('startHourSelect').innerHTML += '<option value="8">0'+i+'</option>';
-		}
-		else {
-			document.getElementById('startHourSelect').innerHTML += '<option value="8">'+i+'</option>';
+		if(i== currentDay.getHours()+1){
+			if(i<10){
+			document.getElementById('startHourSelect').innerHTML += '<option value="'+i+'" selected>0'+i+'</option>';
+			}
+			else {
+				document.getElementById('startHourSelect').innerHTML += '<option value="'+i+'" selected>'+i+'</option>';
+			}
+		} else
+		{
+			if(i<10){
+				document.getElementById('startHourSelect').innerHTML += '<option value="'+i+'">0'+i+'</option>';
+			}
+			else {
+				document.getElementById('startHourSelect').innerHTML += '<option value="'+i+'">'+i+'</option>';
+			}
 		}
 	}
 	addToCal(' :');	
@@ -131,11 +149,24 @@ function initReservationMenu(choosen){
 	
 	addToCal('<select class="timeSelect" id="endHourSelect"></select>');
 	for(i = 8; i <= 22; i++){
-		if(i<10){
-			document.getElementById('endHourSelect').innerHTML += '<option value="8">0'+i+'</option>';
+		
+		if(i== currentDay.getHours()+2)
+		{
+			if(i<10){
+				document.getElementById('endHourSelect').innerHTML += '<option value="'+i+'" selected>0'+i+'</option>';
+			}
+			else {
+				document.getElementById('endHourSelect').innerHTML += '<option value="'+i+'"selected>'+i+'</option>';
+			}
 		}
-		else {
-			document.getElementById('endHourSelect').innerHTML += '<option value="8">'+i+'</option>';
+		else
+		{
+			if(i<10){
+				document.getElementById('endHourSelect').innerHTML += '<option value="'+i+'">0'+i+'</option>';
+			}
+			else {
+				document.getElementById('endHourSelect').innerHTML += '<option value="'+i+'">'+i+'</option>';
+			}
 		}
 	}
 	addToCal(' :');
@@ -144,28 +175,29 @@ function initReservationMenu(choosen){
 	'<option value="0">30</option>'+
 	'</select>');
 	
-	
-	
-	
-	
 	addToCal('<form action ="index.php" method="POST">');
 	addToCal('<input type="text" id="nameBoxRES" placeholder="Név:"  name="nev">')
 	addToCal('<input type="text" id="e-mailBoxRES" placeholder="Email:" name="email">');
 	addToCal('<textarea name="message" id="messageBoxRES" placeholder="Üzenet:" cols="40" rows="5"></textarea>');
-	addToCal('<input type="submit" id="sendButtonRES" value="Lefoglalom">');
+	addToCal('<input type="submit" id="sendButtonRES" onclick="booking()" value="Lefoglalom">');
 	addToCal('</form>');
-
-
-
-	/*			<form action ="index.php" method="POST">
-						<div id="leftConnection">
-							<input type="text" id="nameBox" placeholder="Név:"  name="nev"> <br>
-							<input type="text" id="e-mailBox" placeholder="Email:" name="email">
-						</div>
-						<div id="rightConnection">
-							<textarea name="message" id="messageBox" placeholder="Üzenet:" cols="40" rows="5"></textarea>
-						</div>
-				<input type="submit" id="sendButton" value="Elküldöm">
-				</form>
-	*/
 }
+
+//FOGLALÁST CSINÁLJA, ÜZEN A PHP-NAK!!!
+function booking() {
+				var first = document.getElementById("nameBoxRES").value;
+				var second = document.getElementById("e-mailBoxRES").value;
+				var third = document.getElementById("messageBoxRES").value;
+				var start = document.getElementById('startHourSelect').value;
+				
+				var sendable = first +';'+ second +';' + third +';'+ start+';';
+				
+				var xmlhttp = new XMLHttpRequest();
+				
+				xmlhttp.onreadystatechange = function() {
+					document.getElementById("txtHint").innerHTML = this.responseText;
+				};
+				xmlhttp.open("GET", "connectDB.php?q=" + sendable, true);
+				xmlhttp.send();
+	addToCal("<div>SIKERES FOGLALÁS!</div>");
+		}
