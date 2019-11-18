@@ -1,4 +1,5 @@
 var currentDay = new Date();
+var dateText;
 setUpTheCalendar();
 
 function setUpTheCalendar(){
@@ -108,13 +109,13 @@ function initReservationMenu(choosen){
 	addToCal('<div id="calendarTitle">Foglalás</div>');
 
 	
-	var dateText;
+
 	var res_month = (current.getMonth() + 1);
 	var res_day = choosen;
 	if(current.getMonth() < 10){ res_month = '0' + (current.getMonth()+1); }
 	if(choosen < 10){	res_day = '0' + choosen; }
 
-	dateText= current.getFullYear() + '.' + res_month + '.' + res_day + '.';
+	dateText = current.getFullYear() + '.' + res_month + '.' + res_day + '.';
 
 	addToCal('<div id="choosenDate">'+dateText+ '</div>');
 
@@ -185,12 +186,27 @@ function initReservationMenu(choosen){
 
 //FOGLALÁST CSINÁLJA, ÜZEN A PHP-NAK!!!
 function booking() {
-				var first = document.getElementById("nameBoxRES").value;
-				var second = document.getElementById("e-mailBoxRES").value;
-				var third = document.getElementById("messageBoxRES").value;
-				var start = document.getElementById('startHourSelect').value;
+	//TODO VALIDÁLÁS!!!!!!!!!
+	
+				var resDate = dateText;
+				var resName = document.getElementById("nameBoxRES").value;
+				var resMail = document.getElementById("e-mailBoxRES").value;
+				var resMsg = document.getElementById("messageBoxRES").value;
+				var startH = document.getElementById('startHourSelect').value;
+				var startM = document.getElementById('startMinSelect').value;
+				var finH = document.getElementById('endHourSelect').value;
+				var finM = document.getElementById('endMinSelect').value;
 				
-				var sendable = first +';'+ second +';' + third +';'+ start+';';
+				
+				
+				var sendable = resDate + ';' +
+							   resName +';'+
+							   resMail +';'+
+							   resMsg + ';'+
+							   startH+';'+
+							   startM+';'+
+							   finH+';'+
+							   finM+';';
 				
 				var xmlhttp = new XMLHttpRequest();
 				
@@ -199,5 +215,5 @@ function booking() {
 				};
 				xmlhttp.open("GET", "connectDB.php?q=" + sendable, true);
 				xmlhttp.send();
-	addToCal("<div>SIKERES FOGLALÁS!</div>");
+	addToCal('<div id="resSuccessMsg">Foglalását rögzítettük!</div>');
 		}
