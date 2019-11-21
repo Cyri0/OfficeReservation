@@ -1,0 +1,88 @@
+*{
+	background-color: #0B2240;
+}
+
+h1 {
+	margin-top: 50px;
+	text-align: center;
+	font-size: 80px;
+	color: white;
+	font-family: 'Parisienne', cursive;
+}
+
+h2 {
+	
+	text-align: center;
+	color: white;
+}
+
+#calendar {
+	
+	
+	border: solid white 5px;
+	width:800px;
+	height: 550px;
+	background-color: red;
+	margin: auto;
+	border-radius: 20px;
+	background-image: url('pic.jpg');
+	background-size: cover;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.day {
+	font-family: 'Parisienne', cursive;
+	width: 100px;
+	height: 100px;
+	color: white;
+	background-color: white;
+	float: left;
+	margin-left: 30px;
+	margin-top: 25px;
+	line-height: 100px;
+	text-align: center;
+	font-size: 40px;
+	border-radius: 20px;
+	background:transparent url('transparent.png') repeat center top;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.day:hover {
+	cursor: pointer;
+	background-color: rgba(255, 220, 115, 0.5);
+	color: #AB0000;
+	font-weight: bold;
+}
+
+
+@media only screen and (max-width: 800px) {
+	#calendar {
+		width: 500px;
+		height: 800px;
+	}
+	
+	.day {
+		margin-left: 20px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	
+	h1{
+		font-size: 40px;
+	}
+	
+	#calendar {
+		width: 300px;
+		height: 800px;
+	}
+	
+	.day {
+		width: 60px;
+		margin-left: 10px;
+	}
+}

@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<meta charset="tuf-8">
+		<meta charset="utf-8">
 		<title>Lorem Ipsum dolor si amet</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -9,18 +9,23 @@
 	</head>
 	<body>			
 		<header>
-			<div class="mobileMenu">
-				<select>
-					<option disabled selected>
-						&#9776;
-					</option>
-					<option>Tárgyaló</option>
-					<option>Oktató terem</option>
-					<option>Szolgáltatások</option>
-					<option>Foglalás</option>
-					<option>Kapcsolat</option>
-				</select>
+
+			<div class="topnav">
+			  <a href="#home" class="active"><img id="menuIconMobile" src="images/logo_kicsi.png"></a>
+			  <div id="myLinks">
+				<a href="#office">Tárgyaló</a>
+				<a href="#office">Oktató terem</a>
+				<a href="#products">Szolgáltatások</a>
+				<a href="#reservation">Foglalás</a>
+				<a href="#connection">Kapcsolat</a>
+			  </div>
+			  <a href="javascript:void(0);" class="icon" onclick="mobileMenu()">
+				&#9776;
+			  </a>
 			</div>
+
+			<script src="mobileMenu.js"></script>
+			
 			<nav>
 				<ul>
 					<a href="#office" class="hideable">

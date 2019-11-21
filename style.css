@@ -176,51 +176,63 @@ header nav ul li{
 	header nav ul li:hover {
 		text-decoration: underline;
 	}
-
-	.mobileMenu {
+	
+	.topnav{
 		display: none;
 	}
 
 @media only screen and (max-width: 500px) {
 	header {
 		padding: 0;
-		height: 85px;
+		height: 45px;
 	}
 	
 	header nav ul .hideable {
 		display: none;
 	}
 	
-	.mobileMenu {
-		display: block;
-		position: relative;
-		float: right;
+	.topnav {
+	  display: block;
+	  overflow: hidden;
+	  background-color: var(--color4);
+	  position: relative;
+	}
+
+	.topnav #myLinks {
+	  display: none;
+	}
+
+	.topnav a {
+	  color: white;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  font-size: 17px;
+	  display: block;
+	}
+
+	.topnav a.icon {
+	  background-image: url("images/menuIcon.png");
+	  background-repeat: no-repeat;
+	  background-size: auto;
+	  display: block;
+	  position: absolute;
+	  right: 0;
+	  top: 0;
+	  height: 17px;
+	  width: 17px;
+	}
+
+	.topnav a:hover {
+	  background-color: #ddd;
+	  color: black;
+	}
+
+	.active {
+	  color: white;
 	}
 	
-	.placeholderThreeStripes{
-		font-size: 50px;
-	}
-	
-	.mobileMenu select {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		-ms-appearance: none;
-		border: none;
-		margin-top: 25px;
-		margin-right: 25px;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		text-align: center;
-		background-color: var(--color2);
-		color: var(--color1);
-		font-size: 15px;
-		border-radius: 5px;
-	}
-	
-	.mobileMenu option {
-		color: var(--color1);
-		background-color: var(--color2);
-		font-size: 20px;
+	#menuIconMobile{
+		height: 18px;
 	}
 }
 
