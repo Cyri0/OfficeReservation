@@ -58,19 +58,38 @@ a {
 	font-weight: bold;
 }
 
+h2 {
+		font-size: 40px;
+	color: white;
+	font-family: 'Parisienne', cursive;
+}
 
-@media only screen and (max-width: 800px) {
+p {
+	color: white;
+	font-size: 20px;
+	color: white;
+	font-family: 'Garamond', serif;
+}
+
+img{
+	width: 70%;
+	margin-left: 15%;
+}
+
+
+@media only screen and (max-width: 1000px) {
 	#calendar {
 		width: 500px;
 		height: 800px;
 	}
 	
 	.day {
+		
 		margin-left: 20px;
 	}
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
 	
 	h1{
 		font-size: 40px;

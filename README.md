@@ -1,2 +1,0 @@
-# OfficeReservation
-Irodafoglaló weboldal Arankának

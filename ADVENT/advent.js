@@ -17,10 +17,10 @@ function dayClicked(i){
 function open(i){
 switch(i) {
   case 1:
-    // code block
+    document.getElementById("info").innerHTML = '<a href="forraltbor.html">KATTINTS RÁM!</a>';
     break;
   case 2:
-    // code block
+       document.getElementById("info").innerHTML = '<a href="masodik.html">KATTINTS RÁM!</a>';
     break;
   case 3:
     // code block

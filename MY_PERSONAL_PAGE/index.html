@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+    <title>Óraterv készítő</title>
+    <style>
+    .tableHeads{
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    </style>
+  </head>
+  <body>
+      <br>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Óraterv készítő</h1>
+            <p class="lead">Készítsen könnyen, gyorsan, egyszerűen óraterveket!</p>
+            <hr class="my-4">
+        </div>
+        <div class="jumbotron">
+            <h2>Alapadatok</h2>
+            <form>
+            <table class="table table-light">
+                <tbody>
+                    <tr>
+                        <td class="col-2">A pedagógus neve:</td>
+                        <td class="col-10"><input class="form-control input-sm" type="text" name="nameOfTheTeacher" id="nameOfTheTeacher"></td>
+                    </tr>
+                    <tr>
+                        <td>Tantárgy:</td>
+                        <td><input class="form-control input-sm" type="text" name="schoolSubject" id="schoolSubject"></td>
+                    </tr>
+                    <tr>
+                        <td>Osztály:</td>
+                        <td><input class="form-control input-sm" type="text" name="schoolClass" id="schoolClass"></td>
+                    </tr>
+                    <tr>
+                        <td>Az óra témája:</td>
+                        <td><input class="form-control input-sm" type="text" name="subjectTheme" id="subjectTheme"></td>
+                    </tr>
+                    <tr>
+                        <td>Az óra cél és feladatrendszere:</td>
+                        <td><input class="form-control input-sm" type="text" name="subjectGoals" id="subjectGoals"></td>
+                    </tr>
+                    <tr>
+                        <td>Az óra didaktikai feladatai:</td>
+                        <td><input class="form-control input-sm" type="text" name="subjectDidactics" id="subjectDidactics"></td>
+                    </tr>
+                    <tr>
+                        <td>Tantárgyi kapcsolatok:</td>
+                        <td><input class="form-control input-sm" type="text" name="subjectRelationships" id="subjectRelationships"></td>
+                    </tr>
+                    <tr>
+                        <td>Felhasznált források:</td>
+                        <td><input class="form-control input-sm" type="text" name="usedSources" id="usedSources"></td>
+                    </tr>
+                    <tr>
+                        <td>Dátum:</td>
+                        <td><input class="form-control input-sm" type="date" name="date" id="date"></td>
+                    </tr>
+                </tbody>
+            </table>
+            </form>
+       </div>
+<!--       <div class="jumbotron"> -->
+            <h2>Óraterv</h2>
+            <div class="table-responsive-md">
+            <table class="table table-light" id="lessonPlan">
+                <tbody>
+                    <tr>
+                        <th scope="row" class="col-1">Idő</th>
+                        <th class="col-4">Óra menete</th>           
+                        <th class="col-1">Módszerek</th>
+                        <th class="col-1">Munkaformák</th>
+                        <th class="col-1">Eszközök</th>
+                        <th class="col-4">Megjegyzések</th>
+                    </tr>
+                    <script src="js/insert_new_line.js"></script>
+                </tbody>
+            </table>
+            </div>
+            <button style="float: right; width: 50px; height: 50px; margin-top: 10px;"  class="btn btn-dark" onclick="gimmeNewLine()">+</button>
+            </div>
+       <!-- </div> -->
+    </div> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
